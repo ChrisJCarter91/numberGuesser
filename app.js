@@ -55,6 +55,8 @@ guessBtn.addEventListener('click', function() {
             // Game Over - lost
             gameOver(false, `Game Over, you lost. The correct number was ${winningNumber}`);
 
+        } else if (isNaN(guess)){
+            setMessage(`Please enter a number between ${min} and ${max}, only ${guessesLeft} guesses left`, 'red');
         } else {
             //Game Continues - answer wrong
 
